@@ -146,7 +146,7 @@ elif st.session_state.current_step == 2:
             st.session_state.responses[task['stimulus_text']] = choice
             st.rerun()
 
-        if st.button("Далее") and choice is not None:
-            st.rerun()
+        #if st.button("Далее") and choice is not None:
+            #st.rerun()
     else:
         st.write("Тестовое задание завершено!")
