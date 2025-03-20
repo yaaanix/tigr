@@ -1,5 +1,5 @@
 #для запуска нажать пуск справа, потом в создавшуюся консоль написать 
-#pipx run streamlit run "/Users/anazaharova/Desktop/диплом/Архив 3/tigr.py"
+#pipx run streamlit run /Users/anazaharova/Desktop/диплом/ТИГР_ФИНАЛ/tigr.py
 import streamlit as st
 import pandas as pd
 from datetime import datetime
@@ -936,4 +936,11 @@ elif st.session_state.current_step == 16:  # Задание 8 (ввод отве
             df = pd.DataFrame(list(st.session_state.responses.items()), columns=["Вопрос", "Ответ"])
             filename = f"responses_{datetime.now().strftime('%Y%m%d%H%M%S')}.csv"
             df.to_csv(filename, index=False)
-            st.success(f"Ответы сохранены в файл {filename}!")
+            # Кнопка для скачивания
+            with open(filename, "rb") as f:
+                st.download_button(
+                    label="Скачать результаты",
+                    data=f,
+                    file_name=filename,
+                    mime="text/csv"
+                )
