@@ -144,3 +144,8 @@ elif st.session_state.current_step == 2:
             #st.rerun()
     else:
         st.write("Тестовое задание завершено!")
+        if st.button("Сохранить результаты"):
+            df = pd.DataFrame(list(st.session_state.responses.items()), columns=["Вопрос", "Ответ"])
+            filename = f"responses_{datetime.now().strftime('%Y%m%d%H%M%S')}.csv"
+            df.to_csv(filename, index=False)
+            st.success(f"Ответы сохранены в файл {filename}!")
