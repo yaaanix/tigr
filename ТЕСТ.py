@@ -9,27 +9,21 @@ os.chdir(os.path.dirname(__file__))  # рабочая директория
 person_easy = [
     {
         "prime_text": "Мы косим траву",
-        "stimulus_text": "Мы чин_ кран",
-        "answers": ("им", "ю"),
+        "stimulus_text": "Мы кле_ плитку",
+        "answers": ("им", "ишь"),
         "hint": "Что делаем?"
     },
     {
-        "prime_text": "Ученики решают задачи",
-        "stimulus_text": "Дачники сажа_ растения",
-        "answers": ("ем", "ют"),
-        "hint": "Что делают?"
-    },
-    {
-        "prime_text": "Ты закрываешь дверь",
-        "stimulus_text": "Ты складыва_ вещи в чемодан",
-        "answers": ("ем", "ешь"),
+        "prime_text": "Ты ловишь бабочек",
+        "stimulus_text": "Ты вар_ кашу",
+        "answers": ("ит", "ишь"),
         "hint": "Что делаешь?"
     },
     {
-        "prime_text": "Я люблю чай",
-        "stimulus_text": "Я жонглиру_ апельсинами",
-        "answers": ("ю", "ешь"),
-        "hint": "Что делаю?"
+        "prime_text": "Вы строите дом",
+        "stimulus_text": "Вы смотр_ сериал",
+        "answers": ("ит", "ите"),
+        "hint": "Что делаете?"
     }
 ]
 
