@@ -148,4 +148,11 @@ elif st.session_state.current_step == 2:
             df = pd.DataFrame(list(st.session_state.responses.items()), columns=["Вопрос", "Ответ"])
             filename = f"responses_{datetime.now().strftime('%Y%m%d%H%M%S')}.csv"
             df.to_csv(filename, index=False)
-            st.success(f"Ответы сохранены в файл {filename}!")
+            # Кнопка для скачивания
+            with open(filename, "rb") as f:
+                st.download_button(
+                    label="Скачать результаты",
+                    data=f,
+                    file_name=filename,
+                    mime="text/csv"
+                )
