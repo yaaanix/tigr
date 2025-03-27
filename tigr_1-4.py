@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 import task_data
 import func
-os.chdir(os.path.dirname(__file__))  # рабочая директория
+#os.chdir(os.path.dirname(__file__))  # рабочая директория
 
 
 # Инициализация состояния страницы
